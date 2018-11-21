@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EnumIdentifiers.Data.Migrations
 {
     [DbContext(typeof(DotNetFlixDbContext))]
-    [Migration("20181120210051_Initial")]
-    partial class Initial
+    [Migration("20181121075156_Data")]
+    partial class Data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,8 +26,7 @@ namespace EnumIdentifiers.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Billing")
-                        .IsRequired();
+                    b.Property<int>("Billing");
 
                     b.Property<string>("Email");
 
@@ -63,6 +62,12 @@ namespace EnumIdentifiers.Data.Migrations
                     b.HasKey("Name");
 
                     b.ToTable("SubscriptionLevels");
+
+                    b.HasData(
+                        new { Name = "Basic", NumberDevicesWithDownloadCapability = 1, NumberOfSimultaneousDevices = 1, PricePerMonth = 7.99m, Quality = "Standard" },
+                        new { Name = "Standard", NumberDevicesWithDownloadCapability = 2, NumberOfSimultaneousDevices = 2, PricePerMonth = 10.99m, Quality = "HD" },
+                        new { Name = "Premium", NumberDevicesWithDownloadCapability = 4, NumberOfSimultaneousDevices = 4, PricePerMonth = 13.99m, Quality = "UHD" }
+                    );
                 });
 
             modelBuilder.Entity("EnumIdentifiers.Data.Model.Customer", b =>

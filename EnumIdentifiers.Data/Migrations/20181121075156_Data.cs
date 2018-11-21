@@ -2,7 +2,7 @@
 
 namespace EnumIdentifiers.Data.Migrations
 {
-    public partial class SubscriptionData : Migration
+    public partial class Data : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
 
 namespace EnumIdentifiers.Data.Model
@@ -25,7 +24,7 @@ namespace EnumIdentifiers.Data.Model
 
             modelBuilder.Entity<Customer>()
                 .Property(c => c.Billing)
-                .HasConversion<string>();
+                .HasConversion<int>();
 
             modelBuilder.Entity<Customer>()
                 .HasOne(c => c.SubscriptionLevelRelation)

@@ -24,8 +24,7 @@ namespace EnumIdentifiers.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Billing")
-                        .IsRequired();
+                    b.Property<int>("Billing");
 
                     b.Property<string>("Email");
 

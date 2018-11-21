@@ -32,7 +32,7 @@ namespace EnumIdentifiers.Data.Migrations
                     LastName = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Phone = table.Column<string>(nullable: true),
-                    Billing = table.Column<string>(nullable: false),
+                    Billing = table.Column<int>(nullable: false),
                     SubscriptionLevel = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
