@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\EnumIdentifiers.Console",
+    "\\EnumIdentifiers.Data",
+    "\\EnumIdentifiers.Data\\Migrations",
+    "\\EnumIdentifiers.Data\\Model"
+  ],
+  "SelectedNode": "\\EnumIdentifiers.Data\\EnumIdentifiers.Data.csproj",
+  "PreviewInSolutionExplorer": false
+}

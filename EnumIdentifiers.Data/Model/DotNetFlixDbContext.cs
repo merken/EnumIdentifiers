@@ -8,6 +8,7 @@ namespace EnumIdentifiers.Data.Model
         public DbSet<SubscriptionLevel> SubscriptionLevels { get; set; }
         public DotNetFlixDbContext(DbContextOptions options) : base(options)
         {
+            this.Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
